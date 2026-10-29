@@ -1,0 +1,8 @@
+﻿build/
+.dart_tool/
+.idea/
+*.iml
+.flutter-plugins
+.flutter-plugins-dependencies
+Week 1/
+SS-AN/
