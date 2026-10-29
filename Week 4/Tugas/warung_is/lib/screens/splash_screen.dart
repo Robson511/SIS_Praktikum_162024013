@@ -1,0 +1,47 @@
+/*
+Nama : Wibi Raouf Sutama
+NRP  : 162024013
+Program Warung IS
+*/
+
+import 'package:flutter/material.dart';
+
+import 'main_screen.dart';
+import 'login_page.dart';
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    _goToMainScreen();
+  }
+
+  Future<void> _goToMainScreen() async {
+    await Future.delayed(const Duration(seconds: 4));
+    if (!mounted) return;
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const LoginPage()),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+        child: Image(
+          image: AssetImage('assets/cafe.png'),
+          width: 150,
+          height: 150,
+        ),
+      ),
+    );
+  }
+}
